@@ -1,0 +1,9 @@
+<h1>show page</h1>
+
+<p>name : <%= @tool.name%></p>
+<p>description : <%= @tool.description%></p>
+<p>address : <%= @tool.address%></p><br><Br>
+<p>
+  <%= link_to "Edit", edit_tool_path%> |
+  <%= link_to "Back to Listings", tools_path%>
+</p>

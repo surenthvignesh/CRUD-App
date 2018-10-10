@@ -1,0 +1,4 @@
+class CrudController < ApplicationController
+
+
+end

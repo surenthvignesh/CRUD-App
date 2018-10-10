@@ -1,0 +1,25 @@
+<h1>Tools Index page</h1>
+<p>
+  <%= link_to "Create Tools", new_tool_path %>
+</p>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>DESCRIPTION</th>
+      <th>ADDRESS</th>
+    </tr>
+    <% @tools.each do |tool| %>
+      <tr>
+        <td><%= tool.id%></td>
+        <td><%= tool.name%></td>
+        <td><%= tool.description%></td>
+        <td><%= tool.address%></td>
+        <td><%= link_to "Edit", edit_tool_path(tool)%></td>
+        <td><%= link_to "Show",tool_path(tool)%></td>
+        <td><%= link_to "Delete", tool_path(tool), method: :delete, data: {confirm: "Are you sure ?"}%></td>
+
+      </tr>
+    <% end %>
+  </table>
